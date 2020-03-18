@@ -1,79 +1,60 @@
-# ES6 katas
-In this exercise, you will be converting a series of expressions and functions
-written in es5 to use es6 instead.
+# Katas ES6
 
-# Getting Started
-Getting started is a matter of doing the following:
-1. install dependencies
-2. run tests
-3. complete katas
+Neste exercício, você converterá uma série de expressões e funções escritas em es5 para serem usadas com es6.
 
-## Installing Dependencies
-To install dependencies, *fork [this](https://gitlab.com/kenzie-academy/se/fe/code-quality/s_katas-6) repository, and clone it* to your
-machine. From the root of the repository. Remember that because you are
-_forking_ a repository, there is no need to create a new directory or run
-`npm init` in it first. Once you have this repository on your machine, you
-can install the dependencies from the root of the repository using `npm`:
+# Início
+
+Para começar você precisa fazer isso:
+
+1. instalar dependências
+1. executar testes
+1. completar katas
+
+## Instalando Dependências
+
+Para instalar dependências, faça o *fork [deste repositório](https://gitlab.com/kenzie-academy-brasil/se/fe/code-quality/s_katas-6), e clone-o* para sua máquina. A partir da raiz do repositório. Lembre-se que, porque você está fazendo o *fork* do repositório, não é necessário criar um novo diretório ou executar `npm init` nele primeiro. Quando tiver com o repositório em sua máquina, você pode instalar as dependências a partir da raiz do repositório usando o `npm`:
+
 ```bash
 npm install
 ```
 
-## Running Tests
-The output of tests will be your hint at how close you are to completing various katas. you'll want to run the following command in a new terminal (such as the one found at the bottom of vs code):
+## Executando Testes
+
+O resultado dos testes será um sinal do quão perto você estará de completar os diversos katas. Você deve executar o seguinte comando em um novo terminal:
+
 ```bash
 npm test
 ```
 
-You should then see some output like the following:
+Então, deve aparecer um resultado como este: 
+
 ![test output screenshot](https://raw.githubusercontent.com/kenzieacademy/es6-katas/master/test_output.png)
 
-Here, You can see that we have several test failing, as well as a hint at what we were expecting.
+Aqui você pode ver que temos várias falhas, bem como uma ideia do que estamos esperando.
 
-### Completing Katas
-Next, You should open up whichever kata you want to work on next. We suggest starting with `katas/arrow-functions.js`. In each module, You'll find functions and expressions written in es5 with comments above them explaining which es6 features we'd like you to use to convert them. For example, the first "arrow functions" kata tells you to convert the add function to an arrow function. As such, you'd convert this:
-```javascript
+### Completando Katas
+
+Você encontrará funções e expressões escritas em es5 com comentários acima delas explicando quais features do es6 gostaríamos que você usasse para convertê-las. Por exemplo, o primeiro kata, "arrow functions", diz para você converter a função add para uma função arrow. Portanto, você converteria isso:
+
+```js
 function add(x, y) {
-    return x + y;
+   return x + y;
 }
 ```
 
-Into this in order to get tests to pass:
-```javascript
+nisso para passar nos testes:
+
+```js
 const add = (x, y) => {
-    return x + y;
+   return x + y;
 };
 ```
 
-# Getting Updates
-You may have noticed that we asked you to fork this repository rather than
-clone it. That's so that you can save your work and push it to GitLab. That
-also, however, means that getting updated katas isn't as straight forward.
+Depois de completar esta avaliação, adicione ka-br-correcoes (grupo do GitLab) ao seu repositório como Reporter e envie a URL de seu repositório.
 
-You'll need to add the original KenzieAcademy/es6-katas repository as a
-remote and pull from _that_ to get updates.
-You can add a new origin as follows:
-```bash
-git remote add kenzie git@gitlab.com:kenzie-academy/se/fe/code-quality/s_katas-6.git
-```
+# Dúvidas Frequentes
 
-Before updating, make sure you have a clean working directory (You've
-committed first). Then pull in updates as follows:
-```bash
-git pull kenzie master
-```
-
-Once you complete this assessment add KA_Grading (GitLab member) to your repository as a `Reporter` and submit you repository URL.
-
-# FAQ
-- What are [mocha](https://mochajs.org/) and [chai](http://www.chaijs.com/)? 
-    - They are libraries to make writing unit tests easier. if we had just
-      used `console.assert`, we wouldn't have had the ability to provide as
-      usfeul of hints for how to solve each kata.
-- In `package.json`, i see that the testing libraries are written in
-  `devdependencies` instead of `dependencies`, why?
-    - We use `dependencies` for librarires that are _required_ for the
-      application to run, and `devdependencies` for libraires that assist in
-      the development of an application, but aren't needed to actually run it.
-      In this particular case, the application is just a bunch of katas, and we
-      can technically use those functions without running tests, thus
-      `devDependencies` is used.
+- O são [mocha](https://mochajs.org/) e [chai](http://www.chaijs.com/)?
+  - São bibliotecas que facilitam escrever testes unitários. Se tivéssemos usado apenas `console.assert`, não teríamos tido a habilidade de fornecer dicas tão úteis assim sobre como resolver cada kata.
+- Em `package.json`, eu vi que as bibliotecas de teste são escritas em `devdependencies`, em vez de `dependencies`, por que?
+  - Usamos `dependencies` para bibliotecas que são *obrigatórias* para a execução da aplicação, e `devdependencies` para bibliotecas que auxiliam no desenvolvimento de uma aplicação, mas que não são necessárias para que ela rode de fato. Neste caso em particular, a aplicação é apenas um punhado de katas, e, tecnicamente, nós podemos usar tais funções sem executar testes, portanto `devdependencies` é usado.
